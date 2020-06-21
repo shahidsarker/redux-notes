@@ -31,14 +31,18 @@ const App = () => {
     e.preventDefault();
     const content = e.target.note.value;
     e.target.note.value = "";
-    store.dispatch({
+    store.dispatch(createNote(content));
+  };
+
+  const createNote = (content) => {
+    return {
       type: "NEW_NOTE",
       data: {
         content,
         important: false,
         id: generateId(),
       },
-    });
+    };
   };
 
   const toggleImportance = (id) => {
