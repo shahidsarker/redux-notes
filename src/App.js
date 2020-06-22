@@ -1,13 +1,15 @@
 import React from "react";
-import "./index.css";
+import "./App.css";
 
-import NewNote from "./NewNote";
-import Notes from "./Notes";
+import NewNote from "./components/NewNote";
+import Notes from "./components/Notes";
+import VisibilityFilter from "./components/VisibilityFilter";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <NewNote />
+      <VisibilityFilter />
       <Notes />
     </div>
   );
