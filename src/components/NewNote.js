@@ -10,8 +10,7 @@ const NewNote = (props) => {
     e.preventDefault();
     const content = e.target.note.value;
     e.target.note.value = "";
-    const newNote = await NoteService.createNew(content);
-    dispatch(createNote(newNote));
+    dispatch(createNote(content));
   };
 
   return (
