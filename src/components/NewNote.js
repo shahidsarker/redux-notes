@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { createNote } from "../reducers/noteReducer";
 
 const NewNote = (props) => {
+  console.log(createNote);
+  console.log(props.createNote);
   const addNote = async (e) => {
     e.preventDefault();
     const content = e.target.note.value;
